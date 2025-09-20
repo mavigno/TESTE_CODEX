@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TESTE_CODEX | GitHub Pages</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>TESTE_CODEX</h1>
+        <p class="tagline">Uma página simples hospedada com GitHub Pages</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2>Bem-vindo!</h2>
+        <p>
+          Esta é uma página estática de exemplo criada para validar a integração
+          com o GitHub Pages. Ela usa apenas HTML e CSS e pode ser publicada
+          diretamente a partir deste repositório.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2>Como publicar</h2>
+        <ol>
+          <li>
+            Abra as configurações do repositório no GitHub e acesse a seção
+            <strong>Pages</strong>.
+          </li>
+          <li>
+            Em <em>Source</em>, selecione o branch desejado (por exemplo,
+            <code>main</code>) e a pasta <code>/</code> (raiz) como origem.
+          </li>
+          <li>
+            Salve as alterações e aguarde alguns minutos para a página ser
+            disponibilizada.
+          </li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Próximos passos</h2>
+        <p>
+          Personalize este layout para refletir o seu projeto. Você pode adicionar
+          novas seções, incluir imagens ou mesmo criar páginas adicionais na pasta
+          <code>docs/</code> caso prefira manter a raiz do repositório apenas para
+          código-fonte.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>
+          Feito com ❤ para demonstrar o funcionamento do GitHub Pages.<br />
+          <span class="small">
+            Atualizado em <time id="last-updated"></time>
+          </span>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const timeElement = document.getElementById("last-updated");
+      const locale = document.documentElement.lang || "pt-BR";
+      const formatter = new Intl.DateTimeFormat(locale, {
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      });
+      timeElement.textContent = formatter.format(new Date());
+    </script>
+  </body>
+</html>
